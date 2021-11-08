@@ -1,15 +1,15 @@
-package ma.irirsi.gestionpaieservice.domain.service.core.impl;
+package ma.irirsi.gestionpaieservice.infra.impl;
 
-import ma.irirsi.gestionpaieservice.domain.service.core.facade.TypePrimeService;
 import ma.irirsi.gestionpaieservice.infra.dao.TypePrimeDao;
 import ma.irirsi.gestionpaieservice.infra.entity.TypePrimeEntity;
+import ma.irirsi.gestionpaieservice.infra.facade.TypePrimeInfa;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Service
-public class TypePrimeServiceImpl implements TypePrimeService {
+@Component
+public class TypePrimeInfraImpl implements TypePrimeInfa {
     @Autowired
     private TypePrimeDao dao;
 

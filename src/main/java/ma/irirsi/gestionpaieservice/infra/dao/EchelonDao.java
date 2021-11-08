@@ -1,6 +1,6 @@
-package ma.irirsi.gestionpaieservice.infrastructure.dao;
+package ma.irirsi.gestionpaieservice.infra.dao;
 
-import ma.irirsi.gestionpaieservice.infrastructure.entity.EchelonEntity;
+import ma.irirsi.gestionpaieservice.infra.entity.EchelonEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EchelonDao extends JpaRepository<EchelonEntity, Long> {

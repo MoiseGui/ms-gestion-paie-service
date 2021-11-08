@@ -1,10 +1,10 @@
-package ma.irirsi.gestionpaieservice.domain.service.core.facade;
+package ma.irirsi.gestionpaieservice.infra.facade;
 
 import ma.irirsi.gestionpaieservice.infra.entity.TypePrimeEntity;
 
 import java.util.List;
 
-public interface TypePrimeService {
+public interface TypePrimeInfa {
     public TypePrimeEntity save(TypePrimeEntity typePrime);
     public TypePrimeEntity update(TypePrimeEntity typePrime);
     public List<TypePrimeEntity> findAll();

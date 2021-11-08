@@ -1,20 +1,26 @@
-package ma.irirsi.gestionpaieservice.infrastructure.entity;
+package ma.irirsi.gestionpaieservice.infra.entity;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.minidev.json.annotate.JsonIgnore;
-
-import javax.persistence.*;
-import java.math.BigDecimal;
-import java.util.List;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Data	
 @Entity
 public class PrimeEntity {
     @Id

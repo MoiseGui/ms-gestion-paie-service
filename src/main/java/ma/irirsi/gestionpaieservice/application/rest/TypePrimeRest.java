@@ -1,7 +1,7 @@
 package ma.irirsi.gestionpaieservice.application.rest;
 
 import ma.irirsi.gestionpaieservice.domain.service.core.facade.TypePrimeService;
-import ma.irirsi.gestionpaieservice.infrastructure.entity.TypePrimeEntity;
+import ma.irirsi.gestionpaieservice.infra.entity.TypePrimeEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

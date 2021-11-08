@@ -1,4 +1,4 @@
-package ma.irirsi.gestionpaieservice.infrastructure.entity;
+package ma.irirsi.gestionpaieservice.infra.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

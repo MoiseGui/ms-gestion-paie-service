@@ -1,7 +1,7 @@
-package ma.irirsi.gestionpaieservice.infrastructure.converter;
+package ma.irirsi.gestionpaieservice.infra.converter;
 
 import ma.irirsi.gestionpaieservice.domain.pojo.TypePrime;
-import ma.irirsi.gestionpaieservice.infrastructure.entity.TypePrimeEntity;
+import ma.irirsi.gestionpaieservice.infra.entity.TypePrimeEntity;
 
 public class TypePrimeInfConverter {
     TypePrime to(TypePrimeEntity typePrimeEntity){

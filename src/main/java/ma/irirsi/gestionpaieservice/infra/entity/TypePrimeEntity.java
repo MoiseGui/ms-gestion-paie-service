@@ -1,4 +1,4 @@
-package ma.irirsi.gestionpaieservice.infrastructure.entity;
+package ma.irirsi.gestionpaieservice.infra.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

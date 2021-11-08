@@ -1,8 +1,7 @@
-package ma.irirsi.gestionpaieservice.infrastructure.dao;
+package ma.irirsi.gestionpaieservice.infra.dao;
 
-import ma.irirsi.gestionpaieservice.infrastructure.entity.TypePrimeEntity;
+import ma.irirsi.gestionpaieservice.infra.entity.TypePrimeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 //@RepositoryRestResource
 public interface TypePrimeDao extends JpaRepository<TypePrimeEntity, Long> {

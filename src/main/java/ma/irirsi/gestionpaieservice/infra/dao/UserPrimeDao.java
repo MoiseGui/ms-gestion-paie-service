@@ -1,6 +1,6 @@
-package ma.irirsi.gestionpaieservice.infrastructure.dao;
+package ma.irirsi.gestionpaieservice.infra.dao;
 
-import ma.irirsi.gestionpaieservice.infrastructure.entity.UserPrimeEntity;
+import ma.irirsi.gestionpaieservice.infra.entity.UserPrimeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
