@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data	
+@Data
 @Entity
 public class PrimeEntity {
     @Id
@@ -30,15 +30,11 @@ public class PrimeEntity {
     String libelle;
     BigDecimal montant;
 
-    public PrimeEntity(Long id, BigDecimal montant){
-        this.id = id;
-        this.montant = montant;
-    }
-
     @ManyToOne
-    TypePrimeEntity typePrimeEntity;
+    TypePrimeEntity typePrime;
 
-    @JsonIgnoreProperties("primeEntity")
-    @OneToMany(mappedBy = "primeEntity")
-    List<UserPrimeEntity> userPrimeEntities;
+    @JsonIgnoreProperties("prime")
+    @OneToMany(mappedBy = "prime")
+    List<UserPrimeEntity> userPrimes;
+
 }

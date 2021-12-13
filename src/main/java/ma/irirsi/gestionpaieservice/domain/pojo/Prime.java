@@ -14,6 +14,7 @@ import java.util.List;
 @Data
 public class Prime {
     Long id;
+    String ref;
     String libelle;
     BigDecimal montant;
 

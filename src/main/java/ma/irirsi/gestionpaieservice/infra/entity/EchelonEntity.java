@@ -17,8 +17,10 @@ public class EchelonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+    String ref;
     String libelle;
+    Integer niveau;
     BigDecimal montant;
     @ManyToOne
-    EchelleEntity echelleEntity;
+    EchelleEntity echelle;
 }

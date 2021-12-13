@@ -5,5 +5,5 @@ import java.util.List;
 public class TypePrimeDto {
     String id;
     String libelle;
-    List<PrimeDto> primeDtos;
+    List<PrimeDto> primes;
 }

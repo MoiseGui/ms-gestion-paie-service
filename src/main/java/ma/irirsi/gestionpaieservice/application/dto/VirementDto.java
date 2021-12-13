@@ -9,5 +9,5 @@ public class VirementDto {
     String userMatricule;
     String montant;
 
-    List<PrimeDto> primeDtos;
+    List<PrimeDto> primes;
 }

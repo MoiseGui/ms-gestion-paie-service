@@ -17,10 +17,11 @@ public class UserPrimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+    @Column(unique = true)
     String userMatricule;
 
     @ManyToOne
-    PrimeEntity primeEntity;
+    PrimeEntity prime;
 
     @Temporal(TemporalType.DATE)
     Date dateDebut;

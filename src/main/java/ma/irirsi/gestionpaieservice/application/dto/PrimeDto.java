@@ -7,7 +7,7 @@ public class PrimeDto {
     String libelle;
     String montant;
 
-    TypePrimeDto typePrimeDto;
+    TypePrimeDto typePrime;
 
-    List<UserPrimeDto> userPrimeDtoDtos;
+    List<UserPrimeDto> userPrimes;
 }

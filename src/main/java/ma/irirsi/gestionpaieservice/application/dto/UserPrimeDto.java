@@ -4,7 +4,7 @@ public class UserPrimeDto {
     Long id;
     String userMatricule;
 
-    PrimeDto primeDto;
+    PrimeDto prime;
 
     String dateDebut;
     String dateFin;

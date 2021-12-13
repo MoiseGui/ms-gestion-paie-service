@@ -25,5 +25,5 @@ public class VirementEntity {
     BigDecimal montant;
 
     @OneToMany
-    List<PrimeEntity> primeEntities;
+    List<PrimeEntity> primes;
 }

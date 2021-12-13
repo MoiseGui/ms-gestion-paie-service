@@ -4,8 +4,9 @@ import java.util.List;
 
 public class EchelleDto {
     String id;
-
+    String ref;
     String libelle;
+    Integer niveau;
     String montant;
-    List<EchelonDto> echelonDtoDtos;
+    List<EchelonDto> echelons;
 }

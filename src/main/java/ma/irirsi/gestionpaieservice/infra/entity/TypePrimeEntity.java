@@ -1,5 +1,6 @@
 package ma.irirsi.gestionpaieservice.infra.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +20,8 @@ public class TypePrimeEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String libelle;
-    @JsonIgnoreProperties("typePrimeEntity")
-    @OneToMany(mappedBy = "typePrimeEntity")
-    List<PrimeEntity> primeEntities;
+    @JsonIgnore
+    @JsonIgnoreProperties("typePrime")
+    @OneToMany(mappedBy = "typePrime")
+    List<PrimeEntity> primes;
 }

@@ -1,5 +1,6 @@
 package ma.irirsi.gestionpaieservice.infra.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,10 +19,12 @@ public class EchelleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-
+    String ref;
     String libelle;
+    Integer niveau;
     BigDecimal montant;
 
-    @OneToMany(mappedBy = "echelleEntity")
-    List<EchelonEntity> echelonEntities;
+    @JsonIgnoreProperties("echelle")
+    @OneToMany(mappedBy = "echelle")
+    List<EchelonEntity> echelons;
 }

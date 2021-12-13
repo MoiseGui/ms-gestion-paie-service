@@ -13,7 +13,9 @@ import java.math.BigDecimal;
 @Data
 public class Echelon {
     Long id;
+    String ref;
     String libelle;
+    Integer niveau;
     BigDecimal montant;
     Echelle echelle;
 }

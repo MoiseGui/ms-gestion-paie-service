@@ -14,8 +14,9 @@ import java.util.List;
 @Data
 public class Echelle {
     Long id;
-
+    String ref;
     String libelle;
+    Integer niveau;
     BigDecimal montant;
     List<Echelon> echelons;
 }
