@@ -11,8 +11,10 @@ public interface EchelonInfra extends AbstractInfra {
     public List<Echelon> findAllEchelon();
     public EchelonEntity findById(Long id);
     public EchelonEntity findByRef(String ref);
+    public Echelon findEchelonByRef(String ref);
     public EchelonEntity findByNiveau(Integer niveau);
     public EchelonEntity findByNiveauAndEchelleId(Integer niveau, Long echelleId);
+    public Echelon findEchelonByNiveauAndEchelleId(Integer niveau, Long echelleId);
     public EchelonEntity save(EchelonEntity echelon);
     public Echelon save(Echelon echelon);
     public EchelonEntity update(EchelonEntity echelon);

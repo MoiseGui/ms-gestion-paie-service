@@ -18,8 +18,8 @@ public abstract interface AbstractConverter<T, E> {
 
     public abstract List<T> to(List<E> e);
 
-    public abstract E toItem(T item);
+    public abstract E toEntity(T item);
 
-    public abstract List<E> toItem(List<T> items);
+    public abstract List<E> toEntity(List<T> items);
 
 }

@@ -28,6 +28,7 @@ public class EchelleConverter {
                 echelonList.add(EchelonConverter.to(echelonEntity));
             });
             echelle.setEchelons(echelonList);
+            convertEchelon = false;
         }
 
         return echelle;
@@ -50,6 +51,7 @@ public class EchelleConverter {
                 echelonEntityList.add(EchelonConverter.toEntity(echelon));
             });
             echelleEntity.setEchelons(echelonEntityList);
+            convertEchelon = false;
         }
 
         return echelleEntity;

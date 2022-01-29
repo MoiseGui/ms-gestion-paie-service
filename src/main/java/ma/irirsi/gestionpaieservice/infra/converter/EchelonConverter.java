@@ -4,8 +4,11 @@ import ma.irirsi.gestionpaieservice.domain.pojo.Echelon;
 import ma.irirsi.gestionpaieservice.infra.entity.EchelleEntity;
 import ma.irirsi.gestionpaieservice.infra.entity.EchelonEntity;
 
+import java.util.ArrayList;
+
 public class EchelonConverter{
     public static boolean convertEchelle;
+    public static boolean convertUserEchelons;
 
     public static Echelon to(EchelonEntity echelonEntity) {
         if (echelonEntity == null) return null;
@@ -18,6 +21,12 @@ public class EchelonConverter{
         echelon.setMontant(echelonEntity.getMontant());
         if(convertEchelle && echelonEntity.getEchelle() != null) {
             echelon.setEchelle(EchelleConverter.to(echelonEntity.getEchelle()));
+        }
+        if(convertUserEchelons && echelonEntity.getUserEchelons() != null) {
+            echelon.setUserEchelons(new ArrayList<>());
+            echelonEntity.getUserEchelons().forEach(userEchelonEntity -> {
+                echelon.getUserEchelons().add(UserEchelonConverter.to(userEchelonEntity));
+            });
         }
         return echelon;
     }
@@ -52,6 +61,13 @@ public class EchelonConverter{
                 echelle.setId(echelon.getEchelle().getId());
                 echelonEntity.setEchelle(echelle);
             }
+        }
+
+        if(convertUserEchelons && echelon.getUserEchelons() != null) {
+            echelonEntity.setUserEchelons(new ArrayList<>());
+            echelon.getUserEchelons().forEach(userEchelon -> {
+                echelonEntity.getUserEchelons().add(UserEchelonConverter.toEntity(userEchelon));
+            });
         }
 
         return echelonEntity;

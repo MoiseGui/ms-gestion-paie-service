@@ -6,10 +6,10 @@ import ma.irirsi.gestionpaieservice.infra.core.AbstractInfraImpl;
 import ma.irirsi.gestionpaieservice.infra.dao.UserPrimeDao;
 import ma.irirsi.gestionpaieservice.infra.entity.UserPrimeEntity;
 import ma.irirsi.gestionpaieservice.infra.facade.UserPrimeInfra;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Component
@@ -72,10 +72,25 @@ public class UserPrimeInfraImpl extends AbstractInfraImpl implements UserPrimeIn
         return converter.to(this.findAll());
     }
 
+    @Override
+    public BigDecimal findUserCurrentPrimesMontant(String userMatricule) {
+        List<UserPrimeEntity> userPrimeEntities = this.findByUserMatriculeAndIsActive(userMatricule, true);
+        BigDecimal currentPrimesMontant = new BigDecimal(0);
+        for (UserPrimeEntity userPrimeEntity : userPrimeEntities) {
+            currentPrimesMontant = currentPrimesMontant.add(userPrimeEntity.getPrime().getMontant());
+        }
+
+        return currentPrimesMontant;
+    }
 
     @Override
     public List<UserPrimeEntity> findByUserMatricule(String userMatricule) {
         return this.dao.findByUserMatricule(userMatricule);
+    }
+
+    @Override
+    public List<UserPrimeEntity> findByUserMatriculeAndIsActive(String userMatricule, boolean isActive) {
+        return this.dao.findByUserMatriculeAndIsActive(userMatricule, isActive);
     }
 
     @Override

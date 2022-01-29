@@ -20,7 +20,7 @@ public class TypePrimeEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String libelle;
-    @JsonIgnore
+
     @JsonIgnoreProperties("typePrime")
     @OneToMany(mappedBy = "typePrime")
     List<PrimeEntity> primes;

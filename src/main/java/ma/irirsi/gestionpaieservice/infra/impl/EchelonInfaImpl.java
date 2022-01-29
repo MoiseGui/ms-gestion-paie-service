@@ -26,6 +26,7 @@ public class EchelonInfaImpl extends AbstractInfraImpl implements EchelonInfra {
     @Override
     public List<Echelon> findAllEchelon() {
         EchelonConverter.convertEchelle = true;
+        EchelonConverter.convertUserEchelons = true;
         EchelleConverter.convertEchelon = false;
         return this.dao.findAll().stream().map(EchelonConverter::to).collect(java.util.stream.Collectors.toList());
     }
@@ -47,6 +48,11 @@ public class EchelonInfaImpl extends AbstractInfraImpl implements EchelonInfra {
     }
 
     @Override
+    public Echelon findEchelonByRef(String ref) {
+        return EchelonConverter.to(findByRef(ref));
+    }
+
+    @Override
     public EchelonEntity findByNiveau(Integer niveau) {
         if (niveau == null) {
             return null;
@@ -60,6 +66,11 @@ public class EchelonInfaImpl extends AbstractInfraImpl implements EchelonInfra {
             return null;
         }
         return this.dao.findByNiveauAndEchelleId(niveau, echelleId);
+    }
+
+    @Override
+    public Echelon findEchelonByNiveauAndEchelleId(Integer niveau, Long echelleId) {
+        return EchelonConverter.to(findByNiveauAndEchelleId(niveau, echelleId));
     }
 
     @Override

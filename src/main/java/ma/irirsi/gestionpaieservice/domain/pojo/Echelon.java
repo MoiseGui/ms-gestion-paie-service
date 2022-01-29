@@ -1,16 +1,15 @@
 package ma.irirsi.gestionpaieservice.domain.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString
 public class Echelon {
     Long id;
     String ref;
@@ -18,4 +17,6 @@ public class Echelon {
     Integer niveau;
     BigDecimal montant;
     Echelle echelle;
+
+    List<UserEchelon> userEchelons;
 }

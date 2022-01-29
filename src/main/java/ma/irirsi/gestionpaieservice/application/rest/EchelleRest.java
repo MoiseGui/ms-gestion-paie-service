@@ -1,5 +1,9 @@
 package ma.irirsi.gestionpaieservice.application.rest;
 
+import ma.irirsi.gestionpaieservice.domain.core.Result;
+import ma.irirsi.gestionpaieservice.domain.pojo.Echelle;
+import ma.irirsi.gestionpaieservice.domain.process.echelle.EchelleCreateProcess;
+import ma.irirsi.gestionpaieservice.domain.process.echelle.EchelleCreateProcessInput;
 import ma.irirsi.gestionpaieservice.infra.entity.EchelleEntity;
 import ma.irirsi.gestionpaieservice.infra.facade.EchelleInfra;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/echelles")
 public class EchelleRest {
-
+    @Autowired
+    EchelleCreateProcess echelleCreateProcess;
     @Autowired
     EchelleInfra echelleInfra;
 
@@ -29,14 +34,19 @@ public class EchelleRest {
         return echelleInfra.findByNiveau(niveau);
     }
 
+//    @PostMapping("/")
+//    public EchelleEntity save(@RequestBody EchelleEntity echelleEntity) {
+//        return echelleInfra.save(echelleEntity);
+//    }
+
     @PostMapping("/")
-    public EchelleEntity save(@RequestBody EchelleEntity echelleEntity) {
-        return echelleInfra.save(echelleEntity);
+    public Result save(@RequestBody Echelle echelle) {
+        return echelleCreateProcess.execute(new EchelleCreateProcessInput(echelle));
     }
 
     @PutMapping("/")
-    public EchelleEntity update(@RequestBody EchelleEntity echelleEntity) {
-        return echelleInfra.update(echelleEntity);
+    public EchelleEntity update(@RequestBody EchelleEntity echelle) {
+        return echelleInfra.update(echelle);
     }
 
     @DeleteMapping("/ref/{ref}")

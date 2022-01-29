@@ -4,6 +4,7 @@ import ma.irirsi.gestionpaieservice.domain.pojo.UserPrime;
 import ma.irirsi.gestionpaieservice.infra.core.AbstractInfra;
 import ma.irirsi.gestionpaieservice.infra.entity.UserPrimeEntity;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface UserPrimeInfra extends AbstractInfra {
@@ -23,7 +24,10 @@ public interface UserPrimeInfra extends AbstractInfra {
 
     List<UserPrime> findAllUserPrimes();
 
+    public BigDecimal findUserCurrentPrimesMontant(String userMatricule);
+
     public List<UserPrimeEntity> findByUserMatricule(String userMatricule);
+    public List<UserPrimeEntity> findByUserMatriculeAndIsActive(String userMatricule, boolean isActive);
 
     List<UserPrime> findUserPrimeByUserMatricule(String userMatricule);
 }

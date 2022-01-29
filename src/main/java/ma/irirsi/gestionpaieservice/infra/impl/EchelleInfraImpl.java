@@ -1,5 +1,7 @@
 package ma.irirsi.gestionpaieservice.infra.impl;
 
+import ma.irirsi.gestionpaieservice.domain.pojo.Echelle;
+import ma.irirsi.gestionpaieservice.infra.converter.EchelleConverter;
 import ma.irirsi.gestionpaieservice.infra.core.AbstractInfraImpl;
 import ma.irirsi.gestionpaieservice.infra.dao.EchelleDao;
 import ma.irirsi.gestionpaieservice.infra.entity.EchelleEntity;
@@ -42,8 +44,13 @@ public class EchelleInfraImpl extends AbstractInfraImpl implements EchelleInfra 
     }
 
     @Override
+    public Echelle save(Echelle echelle) {
+        return EchelleConverter.to(save(EchelleConverter.toItem(echelle)));
+    }
+
+    @Override
     public EchelleEntity update(EchelleEntity echelle) {
-        if(echelle != null && findById(echelle.getId()) != null) {
+        if (echelle != null && findById(echelle.getId()) != null) {
             return this.dao.save(echelle);
         }
         return null;
@@ -65,5 +72,11 @@ public class EchelleInfraImpl extends AbstractInfraImpl implements EchelleInfra 
             return null;
         }
         return this.dao.findByNiveau(niveau);
+    }
+
+    @Override
+    public Echelle findByEchelleNiveau(Integer niveau) {
+        EchelleConverter.convertEchelon = true;
+        return EchelleConverter.to(findByNiveau(niveau));
     }
 }
