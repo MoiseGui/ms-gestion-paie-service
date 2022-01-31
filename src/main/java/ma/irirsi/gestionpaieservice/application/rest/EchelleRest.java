@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/echelles")
+@RequestMapping("/gestion-paie/api/v1/echelles")
 public class EchelleRest {
     @Autowired
     EchelleCreateProcess echelleCreateProcess;

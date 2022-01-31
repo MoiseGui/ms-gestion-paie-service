@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/primes")
+@RequestMapping("/gestion-paie/api/v1/primes")
 @Api("Via ce endpoint, vous povez gérer l'ensemble des primes")
 public class PrimeRest {
     @Autowired

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/userPrimes")
+@RequestMapping("/gestion-paie/api/v1/userPrimes")
 public class UserPrimeRest {
     @Autowired
     private UserPrimeInfra userPrimeInfra;

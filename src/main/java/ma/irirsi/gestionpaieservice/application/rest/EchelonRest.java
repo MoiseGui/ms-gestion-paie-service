@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/echelons")
+@RequestMapping("/gestion-paie/api/v1/echelons")
 public class EchelonRest {
     @Autowired
     EchelonCreateProcess echelonCreateProcess;

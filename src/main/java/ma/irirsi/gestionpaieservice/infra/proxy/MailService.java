@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient("ms-mailler")
 public interface MailService {
-    @PostMapping("/api/send")
+    @PostMapping("/ms-mailler/api/send")
     public void sendSimpleMessage(@RequestBody MailParameter mailParameter);
 }

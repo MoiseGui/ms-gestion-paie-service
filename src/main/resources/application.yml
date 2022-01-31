@@ -2,7 +2,7 @@ spring:
   application:
     name: gestion-paie-service
 server:
-  port: 8036
+  port: 8091
 eureka:
   client:
     serviceUrl:

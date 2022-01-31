@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/userEchelons")
+@RequestMapping("/gestion-paie/api/v1/userEchelons")
 public class UserEchelonRest {
     @Autowired
     private UserEchelonInfra infra;

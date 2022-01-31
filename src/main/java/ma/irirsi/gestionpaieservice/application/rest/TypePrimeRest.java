@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController()
-@RequestMapping("/api/v1/typePrimes")
+@RequestMapping("/gestion-paie/api/v1/typePrimes")
 public class TypePrimeRest {
     @Autowired
     private TypePrimeInfa typePrimeInfa;
