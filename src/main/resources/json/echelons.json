@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "ref": "echelon1",
+    "libelle": "Echelon 1",
+    "niveau": 1,
+    "montant": 400.00,
+    "echelle": null,
+    "userEchelons": []
+  },
+  {
+    "id": 2,
+    "ref": "echelon2",
+    "libelle": "Echelon 2",
+    "niveau": 2,
+    "montant": 700.00,
+    "echelle": null,
+    "userEchelons": []
+  }
+]

@@ -9,8 +9,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Entity
 public class UserPrimeEntity {
@@ -29,4 +29,12 @@ public class UserPrimeEntity {
     Date dateFin;
 
     Boolean isActive;
+
+    public UserPrimeEntity(String userMatricule, PrimeEntity prime, Date dateDebut, Date dateFin, Boolean isActive) {
+        this.userMatricule = userMatricule;
+        this.prime = prime;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.isActive = isActive;
+    }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "ref": "prime1",
+    "libelle": "Prime de présence",
+    "montant": 2000.00,
+    "typePrime": null,
+    "userPrimes": []
+  },
+  {
+    "id": 2,
+    "ref": "prime2",
+    "libelle": "Prime de performance",
+    "montant": 4000.00,
+    "typePrime": null,
+    "userPrimes": []
+  },
+  {
+    "id": 3,
+    "ref": "prime6",
+    "libelle": "Prime de Aid",
+    "montant": 1000.00,
+    "typePrime": null,
+    "userPrimes": []
+  }
+]

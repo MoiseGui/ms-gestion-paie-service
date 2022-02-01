@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "ref": "ech1",
+    "libelle": "Echelle 1",
+    "niveau": 1,
+    "montant": 7000.00,
+    "echelons": []
+  },
+  {
+    "id": 2,
+    "ref": "ech2",
+    "libelle": "Echelle 2",
+    "niveau": 2,
+    "montant": 10000.00,
+    "echelons": []
+  }
+]
