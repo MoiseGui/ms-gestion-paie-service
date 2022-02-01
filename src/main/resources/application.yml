@@ -1,5 +1,1 @@
-spring:
-  application:
-    name: gestion-paie-service
-server:
-  port: 9001
+
